@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recharges tokens — THW Coaching</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:#070b0f;color:#eef2f7;min-height:100vh;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    .atmo{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 15% 20%,rgba(0,200,224,0.07) 0%,transparent 60%),radial-gradient(ellipse 60% 60% at 85% 80%,rgba(139,92,246,0.10) 0%,transparent 60%)}
+    .grid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,0.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.018) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 20%,black 10%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 20%,black 10%,transparent 100%)}
+    #root{position:relative;z-index:1}
+    .packs-grid{display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:14px;max-width:1020px;margin:0 auto;align-items:stretch}
+    .cta-btn:hover{filter:brightness(1.09);transform:translateY(-1px)}
+    .cta-btn{transition:all 0.2s}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+    .faq-item.open .faq-answer{max-height:220px}
+    .faq-item.open .faq-icon{background:linear-gradient(135deg,#8b5cf6,#5b6fff);border:none;transform:rotate(45deg)}
+    .faq-item.open button span{color:#eef2f7}
+    .faq-icon{transition:all 0.25s}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(139,92,246,0.45)}50%{box-shadow:0 0 0 10px rgba(139,92,246,0)}}
+    @keyframes studioGlow{0%,100%{box-shadow:0 0 30px rgba(139,92,246,0.18),0 0 60px rgba(91,111,255,0.10)}50%{box-shadow:0 0 50px rgba(139,92,246,0.32),0 0 100px rgba(91,111,255,0.18)}}
+    .card-featured{animation:studioGlow 4s ease-in-out infinite}
+    @media(max-width:960px){.packs-grid{grid-template-columns:1fr;max-width:520px}}
+    @media(max-width:600px){.page-pad{padding-left:16px!important;padding-right:16px!important}}
+  </style>
+</head>
+<body>
+  <div class="atmo"></div>
+  <div class="grid"></div>
+  <div id="root">
+
+    <!-- Header -->
+    <div class="page-pad" style="text-align:center;padding:72px 24px 46px;max-width:860px;margin:0 auto">
+      <div style="display:flex;align-items:center;justify-content:center;gap:11px;margin-bottom:40px">
+        <div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#00c8e0,#5b6fff);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#fff">H</div>
+        <span style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700">THW Coaching</span>
+      </div>
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border-radius:999px;margin-bottom:22px;border:1px solid rgba(139,92,246,0.28);background:rgba(139,92,246,0.07)">
+        <span style="width:6px;height:6px;border-radius:50%;background:#8b5cf6;display:inline-block;animation:pulseDot 2s infinite"></span>
+        <span style="font-family:'DM Mono',monospace;font-size:10px;color:#a78bfa;letter-spacing:0.14em;text-transform:uppercase">Recharges tokens</span>
+      </div>
+      <h1 style="font-family:'Syne',sans-serif;font-size:clamp(34px,5.5vw,58px);font-weight:800;letter-spacing:-0.055em;line-height:1.05;margin:0 0 16px">
+        Des tokens pour<br><span style="background:linear-gradient(90deg,#00c8e0,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent">aller plus loin</span>
+      </h1>
+      <p style="font-size:15px;color:rgba(238,242,247,0.55);line-height:1.6;max-width:520px;margin:0 auto">
+        Ton abonnement inclut des quotas mensuels. Quand tu en veux plus, recharge — les tokens de packs n'expirent jamais.
+      </p>
+    </div>
+
+    <!-- ══ Section 1 · Tokens du chat IA ══ -->
+    <div class="page-pad" style="padding:0 24px 64px;max-width:1020px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
+        <span style="font-family:'DM Mono',monospace;font-size:11px;color:#00c8e0;letter-spacing:0.14em;text-transform:uppercase">01 · Chat IA</span>
+        <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(0,200,224,0.3),transparent)"></div>
+      </div>
+      <h2 style="font-family:'Syne',sans-serif;font-size:clamp(22px,3.4vw,32px);font-weight:800;letter-spacing:-0.04em;margin:0 0 8px">Tokens du coach IA</h2>
+      <p style="font-size:14px;color:rgba(238,242,247,0.55);line-height:1.6;max-width:640px;margin:0 0 22px">
+        Les tokens de discussion alimentent tes conversations avec le coach (Hermès, Athéna, Zeus). La recharge se fait
+        directement <strong style="color:#eef2f7">dans l'application</strong>, depuis ta jauge d'utilisation ou les réglages d'abonnement.
+      </p>
+      <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:19px;padding:24px 26px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
+        <div style="min-width:220px">
+          <div style="font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin-bottom:5px">Recharger mes tokens de chat</div>
+          <div style="font-size:13px;color:rgba(238,242,247,0.5)">Ouvre l'app → jauge de tokens → Recharger. Crédit instantané sur ton compte.</div>
+        </div>
+        <a class="cta-btn" href="https://thw-appli.vercel.app/settings/subscription"
+          style="display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;text-decoration:none;background:linear-gradient(135deg,#00c8e0,#5b6fff);color:#fff;font-weight:700;font-size:14px;flex-shrink:0">
+          Ouvrir l'application →
+        </a>
+      </div>
+    </div>
+
+    <!-- ══ Section 2 · Tokens Studio ══ -->
+    <div class="page-pad" style="padding:0 24px 26px;max-width:1020px;margin:0 auto">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
+        <span style="font-family:'DM Mono',monospace;font-size:11px;color:#a78bfa;letter-spacing:0.14em;text-transform:uppercase">02 · Studio</span>
+        <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(139,92,246,0.35),transparent)"></div>
+      </div>
+      <h2 style="font-family:'Syne',sans-serif;font-size:clamp(22px,3.4vw,32px);font-weight:800;letter-spacing:-0.04em;margin:0 0 8px">Tokens Studio</h2>
+      <p style="font-size:14px;color:rgba(238,242,247,0.55);line-height:1.6;max-width:680px;margin:0 0 8px">
+        Le Studio te laisse assembler des <strong style="color:#eef2f7">systèmes de coachs IA</strong> qui travaillent ensemble — analyse, planification,
+        rapports automatiques. Les abonnements <strong style="color:#eef2f7">Pro</strong> et <strong style="color:#eef2f7">Expert</strong> incluent un quota mensuel
+        (300k et 1M de tokens). Ces packs le complètent : <strong style="color:#a78bfa">ils n'expirent jamais</strong> et sont réservés au Studio — totalement séparés des tokens du chat.
+      </p>
+      <p style="font-size:12.5px;color:rgba(238,242,247,0.42);margin:0 0 28px">
+        Nécessite un compte Hybrid avec abonnement Pro ou Expert · <a href="abonnements.html" style="color:#a78bfa;text-decoration:none;font-weight:600">Voir les abonnements →</a>
+      </p>
+    </div>
+
+    <div class="page-pad packs-grid" style="padding-left:24px;padding-right:24px">
+
+      <!-- Pack Découverte -->
+      <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:19px;padding:26px 26px 22px;display:flex;flex-direction:column">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(238,242,247,0.42);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:12px">Pack Découverte</div>
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
+          <span style="font-family:'Syne',sans-serif;font-size:38px;font-weight:800;letter-spacing:-0.04em">200k</span>
+          <span style="font-size:13px;color:rgba(238,242,247,0.45)">tokens Studio</span>
+        </div>
+        <div style="font-size:13px;color:rgba(238,242,247,0.5);line-height:1.55;margin-bottom:18px">Environ 8 à 15 runs selon les modèles utilisés. Parfait pour découvrir.</div>
+        <div style="flex:1"></div>
+        <div style="font-family:'Syne',sans-serif;font-size:26px;font-weight:800;margin-bottom:14px">4,99 €<span style="font-size:12px;font-weight:500;color:rgba(238,242,247,0.42)"> · une fois</span></div>
+        <a class="cta-btn studio-buy" href="https://buy.stripe.com/00w3cwgpR0HX1K7fJ2f3a17"
+          style="display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:12px;text-decoration:none;background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.4);color:#c4b5fd;font-weight:700;font-size:14px">
+          Acheter →
+        </a>
+      </div>
+
+      <!-- Pack Builder (recommandé) -->
+      <div class="card-featured" style="background:linear-gradient(180deg, rgba(139,92,246,0.07) 0%, rgba(7,11,15,0.97) 36%);border:2px solid #8b5cf6;border-radius:19px;padding:26px 26px 22px;display:flex;flex-direction:column;position:relative;overflow:hidden">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#8b5cf6,#5b6fff)"></div>
+        <div style="position:absolute;top:14px;right:14px;padding:4px 11px;border-radius:999px;background:linear-gradient(135deg,#8b5cf6,#5b6fff);font-size:10px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#fff;box-shadow:0 2px 14px rgba(139,92,246,0.38)">Recommandé</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#a78bfa;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:12px">Pack Builder</div>
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
+          <span style="font-family:'Syne',sans-serif;font-size:38px;font-weight:800;letter-spacing:-0.04em">2M</span>
+          <span style="font-size:13px;color:rgba(238,242,247,0.45)">tokens Studio</span>
+        </div>
+        <div style="font-size:13px;color:rgba(238,242,247,0.5);line-height:1.55;margin-bottom:18px">Le meilleur ratio pour un usage régulier. 10× le pack Découverte pour 6× le prix.</div>
+        <div style="flex:1"></div>
+        <div style="font-family:'Syne',sans-serif;font-size:26px;font-weight:800;margin-bottom:14px">29,99 €<span style="font-size:12px;font-weight:500;color:rgba(238,242,247,0.42)"> · une fois</span></div>
+        <a class="cta-btn studio-buy" href="https://buy.stripe.com/dRm14o7Tl9et60neEYf3a18"
+          style="display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:12px;text-decoration:none;background:linear-gradient(135deg,#8b5cf6,#5b6fff);color:#fff;font-weight:700;font-size:14px;box-shadow:0 4px 24px rgba(139,92,246,0.35)">
+          Acheter →
+        </a>
+      </div>
+
+      <!-- Pack Architecte -->
+      <div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:19px;padding:26px 26px 22px;display:flex;flex-direction:column">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(238,242,247,0.42);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:12px">Pack Architecte</div>
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
+          <span style="font-family:'Syne',sans-serif;font-size:38px;font-weight:800;letter-spacing:-0.04em">5M</span>
+          <span style="font-size:13px;color:rgba(238,242,247,0.45)">tokens Studio</span>
+        </div>
+        <div style="font-size:13px;color:rgba(238,242,247,0.5);line-height:1.55;margin-bottom:18px">Pour les systèmes complexes qui tournent souvent, y compris en automatique.</div>
+        <div style="flex:1"></div>
+        <div style="font-family:'Syne',sans-serif;font-size:26px;font-weight:800;margin-bottom:14px">59,99 €<span style="font-size:12px;font-weight:500;color:rgba(238,242,247,0.42)"> · une fois</span></div>
+        <a class="cta-btn studio-buy" href="https://buy.stripe.com/eVq4gAehJcqFfAX54of3a19"
+          style="display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:12px;text-decoration:none;background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.4);color:#c4b5fd;font-weight:700;font-size:14px">
+          Acheter →
+        </a>
+      </div>
+    </div>
+
+    <div class="page-pad" style="text-align:center;padding:18px 24px 64px;max-width:640px;margin:0 auto">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:12px;background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.2)">
+        <span style="width:6px;height:6px;border-radius:50%;background:#a78bfa;flex-shrink:0"></span>
+        <span style="font-size:12.5px;color:rgba(238,242,247,0.65)">Utilise <strong style="color:#eef2f7">l'email de ton compte Hybrid</strong> lors du paiement — les tokens sont crédités automatiquement en quelques secondes.</span>
+      </div>
+    </div>
+
+    <!-- ══ FAQ ══ -->
+    <div class="page-pad" style="padding:0 24px 72px;max-width:720px;margin:0 auto">
+      <h2 style="font-family:'Syne',sans-serif;font-size:clamp(22px,3.4vw,30px);font-weight:800;letter-spacing:-0.04em;margin:0 0 22px;text-align:center">Questions fréquentes</h2>
+
+      <div class="faq-item" style="border-bottom:1px solid rgba(255,255,255,0.06)">
+        <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 4px;background:none;border:none;cursor:pointer;text-align:left">
+          <span style="font-size:14.5px;font-weight:600;color:rgba(238,242,247,0.75);font-family:'DM Sans',sans-serif">À quoi servent les tokens Studio ?</span>
+          <span class="faq-icon" style="width:24px;height:24px;border-radius:8px;border:1px solid rgba(255,255,255,0.14);display:flex;align-items:center;justify-content:center;color:#eef2f7;font-size:14px;flex-shrink:0">+</span>
+        </button>
+        <div class="faq-answer"><p style="font-size:13.5px;color:rgba(238,242,247,0.5);line-height:1.65;padding:0 4px 18px">Chaque exécution d'un système du Studio mobilise plusieurs coachs IA en parallèle. Les tokens Studio paient cette puissance de calcul : plus le système est complexe (et plus les modèles sont puissants), plus un run consomme. Le coût estimé est toujours affiché avant de lancer.</p></div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:1px solid rgba(255,255,255,0.06)">
+        <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 4px;background:none;border:none;cursor:pointer;text-align:left">
+          <span style="font-size:14.5px;font-weight:600;color:rgba(238,242,247,0.75);font-family:'DM Sans',sans-serif">Les tokens de packs expirent-ils ?</span>
+          <span class="faq-icon" style="width:24px;height:24px;border-radius:8px;border:1px solid rgba(255,255,255,0.14);display:flex;align-items:center;justify-content:center;color:#eef2f7;font-size:14px;flex-shrink:0">+</span>
+        </button>
+        <div class="faq-answer"><p style="font-size:13.5px;color:rgba(238,242,247,0.5);line-height:1.65;padding:0 4px 18px">Non, jamais. Ton quota mensuel inclus est utilisé en premier ; les tokens de packs ne sont entamés qu'ensuite et restent sur ton compte tant que tu ne les as pas consommés.</p></div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:1px solid rgba(255,255,255,0.06)">
+        <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 4px;background:none;border:none;cursor:pointer;text-align:left">
+          <span style="font-size:14.5px;font-weight:600;color:rgba(238,242,247,0.75);font-family:'DM Sans',sans-serif">Comment sont-ils crédités ?</span>
+          <span class="faq-icon" style="width:24px;height:24px;border-radius:8px;border:1px solid rgba(255,255,255,0.14);display:flex;align-items:center;justify-content:center;color:#eef2f7;font-size:14px;flex-shrink:0">+</span>
+        </button>
+        <div class="faq-answer"><p style="font-size:13.5px;color:rgba(238,242,247,0.5);line-height:1.65;padding:0 4px 18px">Automatiquement, quelques secondes après le paiement : ton compte est retrouvé grâce à l'email utilisé lors du paiement (utilise celui de ton compte Hybrid), tu reçois une notification dans l'app et ta jauge Studio est mise à jour.</p></div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:1px solid rgba(255,255,255,0.06)">
+        <button onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 4px;background:none;border:none;cursor:pointer;text-align:left">
+          <span style="font-size:14.5px;font-weight:600;color:rgba(238,242,247,0.75);font-family:'DM Sans',sans-serif">Quelle différence avec les tokens du chat ?</span>
+          <span class="faq-icon" style="width:24px;height:24px;border-radius:8px;border:1px solid rgba(255,255,255,0.14);display:flex;align-items:center;justify-content:center;color:#eef2f7;font-size:14px;flex-shrink:0">+</span>
+        </button>
+        <div class="faq-answer"><p style="font-size:13.5px;color:rgba(238,242,247,0.5);line-height:1.65;padding:0 4px 18px">Ce sont deux soldes totalement séparés. Les tokens du chat alimentent tes conversations avec le coach ; les tokens Studio alimentent uniquement les systèmes multi-agents du Studio. Un run Studio n'entame jamais ton quota de chat, et inversement.</p></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="border-top:1px solid rgba(255,255,255,0.07);padding:22px 24px 28px;text-align:center">
+      <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:12px">
+        <a href="abonnements.html" style="font-size:12px;color:rgba(238,242,247,0.38);text-decoration:none">Abonnements</a>
+        <a href="#" style="font-size:12px;color:rgba(238,242,247,0.38);text-decoration:none">Conditions générales</a>
+        <a href="#" style="font-size:12px;color:rgba(238,242,247,0.38);text-decoration:none">Politique de confidentialité</a>
+      </div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(238,242,247,0.38)">© 2026 THW Coaching</div>
+    </div>
+  </div>
+
+  <script>
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item');
+      item.classList.toggle('open');
+    }
+    // Utilisateur venant de l'app (?uid=...) → crédit instantané via client_reference_id.
+    (function () {
+      try {
+        var uid = new URLSearchParams(window.location.search).get('uid');
+        if (!uid) return;
+        document.querySelectorAll('a.studio-buy').forEach(function (a) {
+          var url = new URL(a.href);
+          url.searchParams.set('client_reference_id', uid);
+          a.href = url.toString();
+        });
+      } catch (e) { /* silencieux */ }
+    })();
+  </script>
+</body>
+</html>
